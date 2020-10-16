@@ -210,7 +210,7 @@ func (s *Service) runRepoOperation(
 				return obj, err
 			}
 		}
-		_, err = checkoutRevision(gitClient, revision, log.WithField("repo", repo.Repo))
+		revision, err = checkoutRevision(gitClient, revision, log.WithField("repo", repo.Repo))
 		if err != nil {
 			return nil, err
 		}
